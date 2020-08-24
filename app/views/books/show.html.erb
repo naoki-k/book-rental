@@ -1,0 +1,35 @@
+<center>
+  <h1>
+    <%= @book.title + " details" %>
+  </h1>
+</center>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th>Action</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Summary</th>
+    <th>Status</th>
+    <th>Nickname</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @events.each do |ev| %>
+    <tr>
+      <td> <%= action_of(ev) %> </td>
+      <td> <%= ev.data[:title] %> </td>
+      <td> <%= ev.data[:author] %> </td>
+      <td> <%= ev.data[:summary] %> </td>
+      <td> <%= ev.data[:status] %> </td>
+      <td> <%= ev.data[:nickname] %> </td>
+      <td> <%= ev.metadata[:timestamp] %> </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back', books_path, class: "btn btn-outline-secondary" %>
