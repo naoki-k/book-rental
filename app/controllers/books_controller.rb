@@ -8,7 +8,7 @@ class BooksController < ApplicationController
   include StreamHelper
 
   def index
-    @books = ::Book.alive.page(params[:page])
+    @books = ::Book.alive.page(params[:page]).per(6)
   end
 
   def show

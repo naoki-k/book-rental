@@ -1,7 +1,6 @@
-<h1>Editing Book</h1>
+<div class="ui row"><%= render 'form', book: @book %></div>
 
-<%= render 'form', book: @book %>
-
-<br>
-<%= link_to 'Show', @book, class: "btn btn-outline-secondary" %> |
-<%= link_to 'Back', books_url, class: "btn btn-outline-secondary" %>
+<div class="ui buttons">
+  <%= link_to '◀︎ Back', books_url, class: 'ui button' %>
+  <%= link_to 'Show', @book, class: 'ui button' %>
+</div>

@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-control", placeholder: 'Title' %>
-  </div>
+  <div class="ui centered grid" style="margin:12px">
+    <div class="ui row huge labeled input">
+      <%= form.label :title, class: "ui label" %>
+      <%= form.text_field :title, placeholder: 'Title' %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :author %>
-    <%= form.text_field :author, class: "form-control", placeholder: 'Author' %>
-  </div>
+    <div class="ui row huge labeled input">
+      <%= form.label :author, class: "ui label" %>
+      <%= form.text_field :author, placeholder: 'Author' %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :summary %>
-    <%= form.text_area :summary, class: "form-control", placeholder: 'Summary' %>
-  </div>
+    <div class="ui row huge labeled input">
+      <%= form.label :summary, class: "ui label" %>
+      <%= form.text_field :summary, placeholder: 'Summary' %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit 'Save', class: 'btn btn-dark' %>
+    <div class="ui row" style="margin-top:16px">
+      <%= form.submit 'Save', class: 'ui secondary huge button' %>
+    </div>
   </div>
 <% end %>

@@ -1,19 +1,18 @@
-<center>
-  <h1>
-    <%= @book.title + " details" %>
-  </h1>
-</center>
+<div class="ui row message">
+  <div class="header">
+    <%= @book.title + " HISTORIES" %>
+  </div>
+</div>
 
-<table class="table table-striped">
-  <thead class="thead-dark">
+<table class="ui table" style="margin: 40px;">
+  <thead>
   <tr>
-    <th>Action</th>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Summary</th>
-    <th>Status</th>
-    <th>Nickname</th>
-    <th>Date</th>
+    <th class="one wide">Action</th>
+    <th class="two wide">Nickname</th>
+    <th class="three wide">Title</th>
+    <th class="three wide">Author</th>
+    <th class="four wide">Summary</th>
+    <th class="three wide">Date</th>
   </tr>
   </thead>
 
@@ -21,15 +20,14 @@
   <% @events.each do |ev| %>
     <tr>
       <td> <%= action_of(ev) %> </td>
+      <td> <%= ev.data[:nickname] %> </td>
       <td> <%= ev.data[:title] %> </td>
       <td> <%= ev.data[:author] %> </td>
       <td> <%= ev.data[:summary] %> </td>
-      <td> <%= ev.data[:status] %> </td>
-      <td> <%= ev.data[:nickname] %> </td>
       <td> <%= ev.metadata[:timestamp] %> </td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Back', books_path, class: "btn btn-outline-secondary" %>
+<%= link_to '◀︎ Back', books_url, class: 'ui button' %>
