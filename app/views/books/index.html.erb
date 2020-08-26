@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<table class='ui table' style="margin: 40px;">
+<table class='ui table' style="width: 90%;">
   <thead>
   <tr>
     <th class="one wide"></th>
@@ -42,10 +42,6 @@
   </tbody>
 </table>
 
-<div class='ui row'>
-  <%= paginate @books %>
-</div>
+<div class='ui row'><%= paginate @books %></div>
 
-<div>
-<%= link_to 'New Book', new_book_path, class: "ui secondary large button" %>
-</div>
+<div class='ui row'><%= link_to 'New Book', new_book_path, class: "ui secondary large button" %></div>
