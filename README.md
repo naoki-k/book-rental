@@ -1,3 +1,3 @@
 # README
 
-CQRS × EC のサンプルアプリです
+CQRS × ES のサンプルアプリです
