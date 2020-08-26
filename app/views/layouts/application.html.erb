@@ -11,9 +11,11 @@
 
   <body class="body-container">
     <div class="main-container">
-      <div class="ui centered grid" style="margin-top:12px">
+      <div class="ui centered grid" style="margin:12px 0;">
         <h1 class="ui row aligned icon header">
-          <i class="circular book icon"></i>
+          <%= link_to 'https://github.com/naoki-k/book-rental', style: "text-decoration: none;" do %>
+            <i class="circular book icon" style="color: black;"></i>
+          <% end %>
           Book Rental
         </h1>
         <%= yield %>
