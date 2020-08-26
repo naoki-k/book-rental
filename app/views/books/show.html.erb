@@ -23,7 +23,7 @@
       <td> <%= ev.data[:nickname] %> </td>
       <td> <%= ev.data[:title] %> </td>
       <td> <%= ev.data[:author] %> </td>
-      <td> <%= ev.data[:summary] %> </td>
+      <td> <%= truncate(ev.data[:summary], length: 50, omission: '... (continued)') %> </td>
       <td> <%= ev.metadata[:timestamp] %> </td>
     </tr>
   <% end %>
