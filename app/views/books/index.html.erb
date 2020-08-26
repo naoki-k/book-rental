@@ -34,7 +34,7 @@
         <div class="ui buttons">
           <%= link_to 'History', book, class: 'ui button' %>
           <%= link_to 'Edit', edit_book_path(book), class: 'ui button' %>
-          <%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ui button' %>
+          <%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ui button disabled' %>
         </div>
       </td>
     </tr>
